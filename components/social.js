@@ -5,8 +5,8 @@ import githubLogo from "../app/images/github.png";
 
 export default function Social() {
   return (
-    <div class="flex flex-row justify-between items-center mt-6">
-      <div class="flex flex-row gap-x-3">
+    <div className="flex flex-row justify-between items-center mt-6">
+      <div className="flex flex-row gap-x-3">
         <a target="_blank" rel="noreferrer" href="#">
           <Image
             alt="Twitter"
