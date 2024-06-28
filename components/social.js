@@ -11,39 +11,39 @@ export default function Social() {
           <Image
             alt="Twitter"
             loading="lazy"
-            width="20"
-            height="20"
+            width="18"
+            height="18"
             decoding="async"
             data-nimg="1"
             src={XLogo}
-            style="color: transparent;"
-            className="mt-1"
+            style={{color: "transparent"}}
+            className="mt-1 "
           />
         </a>
         <a target="_blank" rel="noreferrer" href="#">
           <Image
             alt="Github"
             loading="lazy"
-            width="25"
-            height="25"
+            width="22"
+            height="22"
             decoding="async"
             data-nimg="1"
             src={githubLogo}
-            style="color: transparent;"
-            // className="mb-4"
+            style={{color: "transparent"}}
+            className="ml-1"
           />
         </a>
         <a target="_blank" rel="noreferrer" href="#">
           <Image
             alt="Linkedin"
             loading="lazy"
-            width="25"
-            height="25"
+            width="22"
+            height="22"
             decoding="async"
             data-nimg="1"
             src={linkedLogo}
-            style="color: transparent;"
-            className="mt-0.5"
+            style={{color: "transparent"}}
+            className="mt-0.5 ml-1"
           />
         </a>
       </div>
