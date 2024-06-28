@@ -1,7 +1,7 @@
 import Image from "next/image";
-import XLogo from "../app/images/x.png";
-import linkedLogo from "../app/images/linkedin.png";
-import githubLogo from "../app/images/github.png";
+import XLogo from "../images/x.png";
+import linkedLogo from "../images/linkedin.png";
+import githubLogo from "../images/github.png";
 
 export default function Social() {
   return (

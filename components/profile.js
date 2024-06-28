@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ProfileImage from "../app/images/image.png";
+import ProfileImage from "../images/image.png";
 
 export default function Profile (){
     return(
