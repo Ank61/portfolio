@@ -22,7 +22,7 @@ export default function BlogSection() {
     const toggleMenu = (e) => {
         setIsOpen(!isOpen);
     };
-    return (<div className="mt-4 mb-auto">
+    return (<div className="mt-3 mb-auto">
         <div className="mb-5">
             <div
                 id="speed-dial-menu-default"
@@ -39,7 +39,7 @@ export default function BlogSection() {
                 >
                     Filters
                     <svg
-                        className={`w-3.5 h-3.5 ml-1.5 mt-1 mb-0.5 transition-transform  ${isOpen ? 'rotate-45' : ''}`}
+                        className={`w-3.5 h-3 ml-1.5 mt-1 mb-0.5 transition-transform  ${isOpen ? 'rotate-45' : ''}`}
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -80,8 +80,7 @@ export default function BlogSection() {
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0, transition: { type: "easeOut", duration: 0.9 } }}
-                            exit={{ opacity: 0, x: 10, transition: { type: "easeOut", duration: 0.5 } }}
+                            animate={{ opacity: 1, x: 0, transition: { type: "easeOut", duration: 0.4 } }}
                             className="relative"
                         >
                             <button
