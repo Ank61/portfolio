@@ -13,7 +13,7 @@ const UsesSection = () => {
         Uses
       </motion.h2>
       <motion.p className="mb-6 text-gray-600" initial={{ y: -20 }} animate={{ y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}>
-        Welcome to the "Uses" section of my portfolio! Here, I highlight the tools, technologies, and software that I rely on to build and enhance my portfolio. Each item plays a crucial role in my development process, ensuring a seamless and professional online presence.
+        Welcome to the Uses section of my portfolio! Here, I highlight the tools, technologies, and software that I rely on to build and enhance my portfolio. Each item plays a crucial role in my development process, ensuring a seamless and professional online presence.
       </motion.p>
 
       <Section
@@ -38,7 +38,7 @@ const UsesSection = () => {
           { name: "MongoDB", description: "A NoSQL database that provides flexibility and scalability for storing and managing data." },
           { name: "Express.js", description: "A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications." },
           { name: "React", description: "A JavaScript library for building user interfaces, particularly single-page applications." },
-          { name: "Node.js", description: "A JavaScript runtime built on Chrome's V8 JavaScript engine, allowing me to build scalable network applications." },
+          { name: "Node.js", description: "A JavaScript runtime built on Chromes V8 JavaScript engine, allowing me to build scalable network applications." },
         ]}
       />
 
