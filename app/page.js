@@ -9,8 +9,8 @@ export default function Home() {
         <div className="">
           <p className="text-gray-500">
             Transform your projects with a Full Stack Developer skilled in
-            JavaScript, React.js, Node.js, and Next.js. Let's create something
-            exceptional!
+            JavaScript, React.js, Node.js, and Next.js. Let{"'"}s create
+            something exceptional!
           </p>
         </div>
         <div className="mt-16">
@@ -18,7 +18,7 @@ export default function Home() {
           <ol className="relative border-s border-gray-200">
             <li className="mb-10 ms-4">
               <div className="flex flex-row items-center gap-2">
-              <div className="absolute w-3 h-3 bg-gray-500 rounded-full mt-1.5 -start-1.5 border "></div>
+                <div className="absolute w-3 h-3 bg-gray-500 rounded-full mt-1.5 -start-1.5 border "></div>
                 <div className="text-md font-medium text-gray-900">
                   Senior Software Engineer
                 </div>
@@ -46,17 +46,6 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 w-full gap-x-10 gap-y-5">
             <div className="mt-5">
               <a target="_blank" rel="noopener noreferrer" href="#">
-                <img
-                  alt="Meditations App"
-                  loading="lazy"
-                  width="30"
-                  height="30"
-                  decoding="async"
-                  data-nimg="1"
-                  className="rounded-lg mb-3"
-                  src="/images/projects/syntaxUI.svg"
-                  style={{ color: "transparent" }}
-                />
                 <div className="text-sm mb-1 font-medium text-gray-900">
                   Meditations App
                 </div>
@@ -67,18 +56,6 @@ export default function Home() {
             </div>
             <div className="mt-5" style={{ transform: "none" }}>
               <a target="_blank" rel="noopener noreferrer" href="#">
-                <img
-                  alt="Personal Blog"
-                  loading="lazy"
-                  width="30"
-                  height="30"
-                  decoding="async"
-                  data-nimg="1"
-                  className="rounded-lg mb-3"
-                  srcset="/_next/image?url=%2Fimages%2Fprojects%2Fprettyfolio.png&amp;w=32&amp;q=75 1x, /_next/image?url=%2Fimages%2Fprojects%2Fprettyfolio.png&amp;w=64&amp;q=75 2x"
-                  src="/_next/image?url=%2Fimages%2Fprojects%2Fprettyfolio.png&amp;w=64&amp;q=75"
-                  style={{ color: "transparent" }}
-                />
                 <div className="text-sm mb-1 font-medium text-gray-900">
                   Personal Blog
                 </div>
