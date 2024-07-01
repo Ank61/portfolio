@@ -3,6 +3,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import close from "../images/close.svg"
 import Image from "next/image";
+import md from "../images/md.svg";
+import next from "../images/next.svg";
+import node from "../images/node.svg";
+import react from "../images/react.svg";
+import stripe from "../images/stripe.svg";
+import supabase from "../images/supabase.svg";
+import js from "../images/js.svg";
+import Link from "next/link";
 
 export default function AboutSection() {
     const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -107,9 +115,7 @@ export default function AboutSection() {
                     {isLargeScreen ? <AnimatePresence >
                         {selectedId && projects.filter(project => project.id === selectedId).map(project =>
                             <motion.div
-                                 animate={{  boxShadow: '0px 5px 13px rgba(0, 0, 0, 0.4)' }}
-                                // initial={{ opacity: 0, y: 60 }}
-                                // exit={{ opacity: 0, y: 60 }}
+                                animate={{ boxShadow: '0px 5px 13px rgba(0, 0, 0, 0.4)' }}
                                 layoutId={selectedId}
                                 className="absolute top-[29%] left-[9%] shadow-lg p-6 bg-white rounded-md"
                             >
@@ -120,16 +126,37 @@ export default function AboutSection() {
                                     </motion.button>
                                 </div>
                                 <motion.h5 className="mt-2 text-sm">{project.description}</motion.h5>
+                                <motion.h5 className="mt-5 text-sm font-bold">Technologies Used</motion.h5>
+                                <motion.div className="flex justify-between items-center mx-5">
+                                    <Image src={js} height={50} width={50} alt="Tech" />
+                                    <Image src={react} height={50} width={50} alt="Tech" />
+                                    <Image src={next} height={50} width={50} alt="Tech" />
+                                    <Image src={md} height={120} width={120} alt="Tech" />
+                                </motion.div>
+                                <motion.div className="flex justify-between items-center mx-10">
+                                    <Image src={node} height={50} width={50} alt="Tech" />
+                                    <Image src={stripe} height={70} width={70} alt="Tech" />
+                                    <Image src={supabase} height={150} width={150} alt="supabase" />
+                                </motion.div>
+                                <div className="flex justify-center items-center mx-auto mt-4">
+                                    <Link className="bg-gray-900 hover:bg-gray-700 text-xs text-white px-4 py-2 rounded-md disabled:opacity-80 mr-6" href={'/'}>Demo</Link>
+                                    <Link className="bg-gray-900 hover:bg-gray-700 text-xs text-white px-4 py-2 rounded-md disabled:opacity-80" href={'/'}>Github</Link>
+                                </div>
                             </motion.div>
                         )}
                     </AnimatePresence> : null}
                 </div>
             </div>
+            <div class="mt-16"><div class="mt-1"><h1 class="font-medium text-gray-900 mb-4 text-lg">Open Source Contributions</h1>
+                <p class="text-gray-500 mt-4">As a dedicated JavaScript developer, I actively contribute to various projects on GitHub. My contributions reflect my passion for open-source software and my commitment to continuous learning and community collaboration. </p>
+            </div></div>
 
             <div class="mt-16"><div class="mt-1"><h1 class="font-medium text-gray-900 mb-4 text-lg">Meditations Newsletter</h1>
                 <p class="text-gray-500 mt-4">Stay ahead of the curve with my monthly newsletter called Meditations. Receive valuable insights on the latest trends, techniques, and tools in web development and design.</p>
-                <form class="relative"><input class="border w-full mt-4 px-2 py-3 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent" placeholder="Enter your email" value="" />
-                    <button class="bg-gray-900 hover:bg-gray-700 inline-block top-6 text-xs right-1 text-white px-2 py-2 rounded-md absolute disabled:opacity-80" type="submit" disabled="">Subscribe</button></form></div></div>
+                <form class="relative">
+                    <input class="border w-full mt-4 px-2 py-3 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent" placeholder="Enter your email" value="" />
+                    <button class="bg-gray-900 hover:bg-gray-700 inline-block top-6 text-xs right-1 text-white px-2 py-2 rounded-md absolute disabled:opacity-80" type="submit" disabled="">Subscribe</button>
+                </form></div></div>
 
         </motion.div >
     )
