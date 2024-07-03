@@ -10,7 +10,7 @@ export default function Navbar() {
     { href: "/", label: "About" },
     { href: "/blogs", label: "Blogs" },
     { href: "/uses", label: "Uses" },
-    { href: "/newsletter", label: "Newsletter" },
+    // { href: "/newsletter", label: "Newsletter" },
     { href: "/contact", label: "Contact" },
   ];
 
@@ -22,7 +22,7 @@ export default function Navbar() {
             whileTap={{ scale: 0.2 }}
             transition={{ ease: "easeOut", duration: 1 }}
             className={`relative text-sm transition-colors px-2 text-black py-1 rounded-md ${
-              router === item.href ? "font-bold " : "font-medium"
+              router === item.href ? "font-extrabold " : "font-medium"
             }`}
           >
             <span className="relative z-10">{item.label}</span>
