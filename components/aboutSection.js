@@ -63,13 +63,16 @@ export default function AboutSection() {
       className="max-w-3xl mb-auto"
     >
       <div>
-        <p className="text-gray-500">
-          Transform your projects with a Full Stack Developer skilled in
+        <h1 class="mb-8 mt-4 text-xl font-medium tracking-tighter">
+          hey, I{"'"}m Saige 👋
+        </h1>
+        <p class="prose prose-neutral dark:prose-invert">
+          I am a Full Stack Developer skilled in
           JavaScript, React.js, Node.js, and Next.js. Let{"'"}s create something
           exceptional!
         </p>
       </div>
-      <div className="mt-16">
+      {/* <div className="mt-16">
         <h1 className="font-medium text-gray-900 mb-4 text-lg">Experience</h1>
         <ol className="relative border-s border-gray-200">
           <li className="mb-10 ms-4">
@@ -96,8 +99,8 @@ export default function AboutSection() {
             </div>
           </li>
         </ol>
-      </div>
-      <div class="mt-16">
+      </div> */}
+      <div class="mt-10">
         <h1 class="font-medium text-gray-900 mb-4 text-lg">Projects</h1>
         <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-full gap-x-3 gap-y-2">
           {projects.map((project) => (
