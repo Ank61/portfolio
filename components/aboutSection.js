@@ -64,9 +64,8 @@ export default function AboutSection() {
     >
       <div>
         <p className="text-gray-500">
-          Transform your projects with a Full Stack Developer skilled in
-          JavaScript, React.js, Node.js, and Next.js. Let{"'"}s create something
-          exceptional!
+          Building High-Performance, Real-Time Web Applications with Seamless
+          Frontend Design and Robust Backend Architecture.
         </p>
       </div>
       <div className="mt-16">
@@ -76,23 +75,23 @@ export default function AboutSection() {
             <div className="flex flex-row items-center gap-2">
               <div className="absolute w-3 h-3 bg-gray-500 rounded-full mt-1.5 -start-1.5 border "></div>
               <div className="text-md font-medium text-gray-900">
-                Senior Software Engineer
+                Software Engineer L1
               </div>
               <div className="inline-block ml-2  text-xs rounded-full px-1 py-0  text-gray-500">
-                Present
+              2 yrs 8 mos
               </div>
             </div>
             <div className="mb-4 text-sm font-normal text-gray-500">
-              Google India
+              Talentelgia Technologies
             </div>
           </li>
           <li className="mb-10 ms-4">
             <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border "></div>
             <div className="text-md font-medium text-gray-900">
-              Software Engineer
+              Junior Software Engineer
             </div>
             <div className="mb-4 text-sm font-normal text-gray-500">
-              Microsoft
+              Talentelgia Technologies
             </div>
           </li>
         </ol>

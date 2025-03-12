@@ -7,7 +7,7 @@ export default function Social() {
   return (
     <div className="flex flex-row justify-between items-center mt-6">
       <div className="flex flex-row gap-x-3">
-        <a target="_blank" rel="noreferrer" href="#">
+        <a target="_blank" rel="noreferrer" href="https://x.com/AnkitChohan61">
           <Image
             alt="Twitter"
             loading="lazy"
@@ -20,7 +20,7 @@ export default function Social() {
             className="mt-1 "
           />
         </a>
-        <a target="_blank" rel="noreferrer" href="#">
+        <a target="_blank" rel="noreferrer" href="https://github.com/Ank61">
           <Image
             alt="Github"
             loading="lazy"
@@ -33,7 +33,7 @@ export default function Social() {
             className="ml-1"
           />
         </a>
-        <a target="_blank" rel="noreferrer" href="#">
+        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ankitchohan61/">
           <Image
             alt="Linkedin"
             loading="lazy"
