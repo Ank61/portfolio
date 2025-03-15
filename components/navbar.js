@@ -5,12 +5,10 @@ import Link from "next/link";
 
 export default function Navbar() {
   const router = usePathname();
-  console.log(router);
   const navItems = [
     { href: "/", label: "About" },
-    { href: "/blogs", label: "Blogs" },
-    { href: "/uses", label: "Uses" },
-    { href: "/newsletter", label: "Newsletter" },
+    { href: "/blogs", label: "Projects" },
+    { href: "/uses", label: "Skills" },
     { href: "/contact", label: "Contact" },
   ];
 
