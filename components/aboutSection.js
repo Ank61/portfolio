@@ -1,59 +1,33 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import close from "../images/close.svg";
-import Image from "next/image";
-import md from "../images/md.svg";
-import next from "../images/next.svg";
-import node from "../images/node.svg";
-import react from "../images/react.svg";
-import stripe from "../images/stripe.svg";
-import supabase from "../images/supabase.svg";
-import js from "../images/js.svg";
+// import close from "../images/close.svg";
+// import Image from "next/image";
+// import md from "../images/md.svg";
+// import next from "../images/next.svg";
+// import node from "../images/node.svg";
+// import react from "../images/react.svg";
+// import stripe from "../images/stripe.svg";
+// import supabase from "../images/supabase.svg";
+// import js from "../images/js.svg";
 import Link from "next/link";
 
 export default function AboutSection() {
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
-  const [selectedId, setSelectedId] = useState(null);
+  // const [isLargeScreen, setIsLargeScreen] = useState(false);
+  // const [selectedId, setSelectedId] = useState(null);
 
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setIsLargeScreen(window.innerWidth >= 1024); // Adjust breakpoint as needed
-    };
+  // useEffect(() => {
+  //   const checkScreenSize = () => {
+  //     setIsLargeScreen(window.innerWidth >= 1024); // Adjust breakpoint as needed
+  //   };
 
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
+  //   checkScreenSize();
+  //   window.addEventListener("resize", checkScreenSize);
 
-    return () => {
-      window.removeEventListener("resize", checkScreenSize);
-    };
-  }, []);
-
-  const projects = [
-    {
-      id: 1,
-      title: "Meditations App",
-      description: "An app for organizing book notes and personal reflections.",
-    },
-    {
-      id: 2,
-      title: "Personal Blog",
-      description:
-        "A platform for sharing thoughts and insights on various topics.",
-    },
-    {
-      id: 3,
-      title: "Creative Portfolio",
-      description:
-        "Showcase your work and achievements in a visually appealing portfolio.",
-    },
-    {
-      id: 4,
-      title: "Quote Vault",
-      description:
-        "Curate and store your favorite quotes for inspiration and motivation.",
-    },
-  ];
+  //   return () => {
+  //     window.removeEventListener("resize", checkScreenSize);
+  //   };
+  // }, []);
 
   return (
     <motion.div
@@ -63,22 +37,24 @@ export default function AboutSection() {
       className="max-w-3xl mb-auto"
     >
       <div>
-        <p className="text-gray-500">
-          Building High-Performance, Real-Time Web Applications with Seamless
-          Frontend Design and Robust Backend Architecture.
+        <p className="text-gray-500 text-md">
+          Full-Stack Engineer specializing in AI-powered applications, scalable
+          system architecture, and intuitive user experiences. With a passion
+          for cutting-edge technologies, I blend React, Node.js, and AI to
+          create intelligent, high-performance solutions.
         </p>
       </div>
-      <div className="mt-16">
+      <div className="mt-10 md:mt-10">
         <h1 className="font-medium text-gray-900 mb-4 text-lg">Experience</h1>
         <ol className="relative border-s border-gray-200">
           <li className="mb-10 ms-4">
             <div className="flex flex-row items-center gap-2">
-              <div className="absolute w-3 h-3 bg-gray-500 rounded-full mt-1.5 -start-1.5 border "></div>
+              <div className="absolute w-3 h-3 bg-gray-600 rounded-full mt-1.5 -start-1.5 border "></div>
               <div className="text-md font-medium text-gray-900">
                 Software Engineer L1
               </div>
               <div className="inline-block ml-2  text-xs rounded-full px-1 py-0  text-gray-500">
-              2 yrs 8 mos
+                2 yrs 8 mos
               </div>
             </div>
             <div className="mb-4 text-sm font-normal text-gray-500">
@@ -96,8 +72,8 @@ export default function AboutSection() {
           </li>
         </ol>
       </div>
-      <div class="mt-16">
-        <h1 class="font-medium text-gray-900 mb-4 text-lg">Projects</h1>
+      {/* <div class="mt-10 md:mt-10">
+        <h1 class="font-medium text-gray-900 mb-2 text-lg">Projects</h1>
         <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-full gap-x-3 gap-y-2">
           {projects.map((project) => (
             <motion.div
@@ -106,9 +82,8 @@ export default function AboutSection() {
               key={project.id}
               layoutId={project.id}
               onClick={() => setSelectedId(project.id)}
-              className="  mt-5 cursor-pointer p-4 rounded-lg"
-            >
-              <div className="text-sm mb-1 font-medium text-gray-900">
+              className="cursor-pointer p-4 rounded-lg">
+              <div className="text-md font-medium text-gray-900">
                 {project.title}
               </div>
               <div className="max-w-xs text-sm font-normal text-gray-500">
@@ -225,7 +200,7 @@ export default function AboutSection() {
             </button>
           </form>
         </div>
-      </div>
+      </div> */}
     </motion.div>
   );
 }
