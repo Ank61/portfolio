@@ -64,9 +64,10 @@ export default function AboutSection() {
     >
       <div>
         <p className="text-gray-500">
-          Transform your projects with a Full Stack Developer skilled in
-          JavaScript, React.js, Node.js, and Next.js. Let{"'"}s create something
-          exceptional!
+          Full-Stack Software Engineer | Expert in React.js, Next.js, NestJS,
+          and TypeScript | Architecting Scalable SaaS Solutions, Real-Time
+          Applications, and Secure Cloud Deployments on AWS and Azure with
+          Docker
         </p>
       </div>
       <div className="mt-16">
@@ -83,7 +84,7 @@ export default function AboutSection() {
               </div>
             </div>
             <div className="mb-4 text-sm font-normal text-gray-500">
-              Google India
+              Zimble Code
             </div>
           </li>
           <li className="mb-10 ms-4">
@@ -92,7 +93,7 @@ export default function AboutSection() {
               Software Engineer
             </div>
             <div className="mb-4 text-sm font-normal text-gray-500">
-              Microsoft
+              Talentlegia Technologies
             </div>
           </li>
         </ol>
@@ -201,7 +202,7 @@ export default function AboutSection() {
         </div>
       </div>
 
-      <div class="mt-16">
+      {/* <div class="mt-16">
         <div class="mt-1">
           <h1 class="font-medium text-gray-900 mb-4 text-lg">
             Meditations Newsletter
@@ -226,7 +227,7 @@ export default function AboutSection() {
             </button>
           </form>
         </div>
-      </div>
+      </div> */}
     </motion.div>
   );
 }
