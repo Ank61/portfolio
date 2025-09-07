@@ -45,7 +45,7 @@ export default function AboutSection() {
             {" "}
             fintech, e-commerce, and SaaS industries
           </span>
-          . I've successfully delivered{" "}
+          . Ive successfully delivered{" "}
           <span className="text-gray-700 font-medium">
             15+ production applications
           </span>{" "}
@@ -56,8 +56,8 @@ export default function AboutSection() {
           Passionate about creating seamless user experiences and robust backend
           architectures, I specialize in real-time applications, secure cloud
           deployments on AWS and Azure, and performance optimization that has
-          improved application load times by up to 40%. When I'm not coding,
-          you'll find me exploring new technologies or contributing to
+          improved application load times by up to 40%. When Im not coding,
+          youll find me exploring new technologies or contributing to
           open-source projects.
         </p>
       </div>
