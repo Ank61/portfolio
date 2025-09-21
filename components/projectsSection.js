@@ -6,6 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 import phoneado from "../images/pphones.png";
 import partyra from "../images/partya.png";
+import canonizer from "../images/canonizer.png";
+import mavrick from "../images/mavrick.png";
+import authentek from "../images/authentek.png";
 
 export default function ProjectsSection() {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -26,6 +29,49 @@ export default function ProjectsSection() {
 
   const projects = [
     {
+      id: 9,
+      title: "Authentek",
+      description:
+        "A comprehensive platform offering identity and access management solutions. Led the development of multiple subsidiary projects including Tekaverse and Tekalog, focusing on secure authentication and logging services.",
+      technologies: ["React", "Node.js", "Azure", "OAuth 2.0", "REST APIs", "MongoDB"],
+      demoLink: "https://authentek.io/",
+      githubLink: null,
+      image: "authentek",
+      subsidiaryProjects: [
+        {
+          name: "Tekaverse",
+          description: "A secure virtual environment for identity management and authentication services.",
+          link: "https://tekaversebeta.azurewebsites.net/"
+        },
+        {
+          name: "Tekalog",
+          description: "Comprehensive logging and monitoring solution for authentication events and system activities.",
+          link: "https://tekalogbeta.azurewebsites.net/"
+        }
+      ]
+    },
+    {
+      id: 8,
+      title: "Mavrick Club",
+      description:
+        "A mobile application for the Mavrick Club community. Solely handled the entire backend development, including API design, database architecture, and server infrastructure to ensure seamless user experience and robust performance.",
+      technologies: ["Node.js", "Express", "MongoDB", "AWS", "RESTful APIs", "WebSockets"],
+      demoLink: null,
+      playStoreLink: null,
+      githubLink: null,
+      image: "mavrick",
+    },
+    {
+      id: 7,
+      title: "Canonizer",
+      description:
+        "A web application for collaborative knowledge management and consensus building. Worked extensively on the frontend using React.js to create an intuitive user interface for managing and visualizing complex topic hierarchies.",
+      technologies: ["React.js", "Redux", "Material-UI", "D3.js", "REST APIs"],
+      demoLink: "https://canonizer.com/",
+      githubLink: null,
+      image: "canonizer",
+    },
+    {
       id: 5,
       title: "Phoneado",
       description:
@@ -35,8 +81,7 @@ export default function ProjectsSection() {
       playStoreLink:
         "https://play.google.com/store/apps/details?id=com.phoneado.android",
       githubLink: null,
-      image:
-        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/2b/3c/4d/2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q/2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q.png/460x0w.webp",
+      image: "phoneado",
     },
     {
       id: 6,
@@ -48,8 +93,7 @@ export default function ProjectsSection() {
       playStoreLink:
         "https://play.google.com/store/apps/details?id=com.partyra.android",
       githubLink: null,
-      image:
-        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource125/v4/2b/3c/4d/2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q/2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q.png/460x0w.webp",
+      image: "partya",
     },
     {
       id: 1,
@@ -66,40 +110,24 @@ export default function ProjectsSection() {
       demoLink: "https://chat-demo.com",
       githubLink: "https://github.com/username/chat-app",
     },
-    {
-      id: 2,
-      title: "E-Commerce Platform",
-      description:
-        "A full-featured e-commerce platform with product management, cart functionality, and secure payment processing using Stripe integration.",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
-      demoLink: "https://ecommerce-demo.com",
-      githubLink: "https://github.com/username/ecommerce",
-    },
-    {
-      id: 3,
-      title: "Task Management System",
-      description:
-        "A collaborative task management system with real-time updates, team collaboration features, and progress tracking.",
-      technologies: ["React", "Redux", "Node.js", "PostgreSQL", "Socket.io"],
-      demoLink: "https://tasks-demo.com",
-      githubLink: "https://github.com/username/task-manager",
-    },
-    {
-      id: 4,
-      title: "AI-Powered Content Generator",
-      description:
-        "An AI tool that generates creative content, blog posts, and social media updates using OpenAI's GPT model.",
-      technologies: [
-        "Next.js",
-        "OpenAI API",
-        "Tailwind CSS",
-        "Node.js",
-        "MongoDB",
-      ],
-      demoLink: "https://content-gen-demo.com",
-      githubLink: "https://github.com/username/content-generator",
-    },
   ];
+
+  const getImageComponent = (imageName) => {
+    switch (imageName) {
+      case 'phoneado':
+        return phoneado;
+      case 'partya':
+        return partyra;
+      case 'canonizer':
+        return canonizer;
+      case 'mavrick':
+        return mavrick;
+      case 'authentek':
+        return authentek;
+      default:
+        return null;
+    }
+  };
 
   return (
     <motion.div
@@ -110,7 +138,7 @@ export default function ProjectsSection() {
       onClick={() => setSelectedId(null)}
     >
       <div>
-        <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-full gap-x-3 gap-y-2">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-full gap-x-3 gap-y-2">
           {projects.map((project) => (
             <motion.div
               id="project"
@@ -128,11 +156,11 @@ export default function ProjectsSection() {
               {project.image ? (
                 <div className="mb-3 h-28 md:h-32 flex items-center justify-center">
                   <Image
-                    src={project.id === 5 ? phoneado : partyra}
+                    src={getImageComponent(project.image)}
                     alt={`${project.title} image`}
                     width={300}
                     height={300}
-                    className="h-24 md:h-28 w-auto object-contain rounded-md"
+                    className="h-20 md:h-28 w-auto object-contain rounded-md"
                   />
                 </div>
               ) : null}
@@ -152,18 +180,43 @@ export default function ProjectsSection() {
                   </span>
                 ))}
               </div>
+              {/* {project.subsidiaryProjects && (
+                <div className="mt-3">
+                  <div className="text-xs font-medium text-gray-500 mb-2">Subsidiary Projects:</div>
+                  <div className="space-y-2">
+                    {project.subsidiaryProjects.map((sub, idx) => (
+                      <div key={idx} className="text-sm">
+                        <span className="font-medium">{sub.name}: </span>
+                        <a
+                          href={sub.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:underline"
+                        >
+                          View Project →
+                        </a>
+                        <p className="text-xs text-gray-500">{sub.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )} */}
               <div className="flex gap-3">
-                <Link
-                  href={project.demoLink}
-                  className="text-sm text-gray-600 hover:text-gray-900"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {project.demoLink?.includes("apps.apple.com")
-                    ? "App Store →"
-                    : "Live Demo →"}
-                </Link>
-                {project.playStoreLink ? (
+                {project.demoLink && (
+                  <Link
+                    href={project.demoLink}
+                    className="text-sm text-gray-600 hover:text-gray-900"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {project.demoLink.includes("apps.apple.com")
+                      ? "App Store →"
+                      : project.demoLink.includes("canonizer.com")
+                        ? "View Project →"
+                        : "Live Demo →"}
+                  </Link>
+                )}
+                {project.playStoreLink && (
                   <Link
                     href={project.playStoreLink}
                     className="text-sm text-gray-600 hover:text-gray-900"
@@ -172,8 +225,8 @@ export default function ProjectsSection() {
                   >
                     Play Store →
                   </Link>
-                ) : null}
-                {project.githubLink ? (
+                )}
+                {project.githubLink && (
                   <Link
                     href={project.githubLink}
                     className="text-sm text-gray-600 hover:text-gray-900"
@@ -182,7 +235,7 @@ export default function ProjectsSection() {
                   >
                     GitHub →
                   </Link>
-                ) : null}
+                )}
               </div>
             </motion.div>
           ))}
@@ -225,8 +278,14 @@ export default function ProjectsSection() {
                               project.id === 5
                                 ? phoneado
                                 : project.id === 6
-                                ? partyra
-                                : project.image
+                                  ? partyra
+                                  : project.id === 7
+                                    ? canonizer
+                                    : project.id === 8
+                                      ? mavrick
+                                      : project.id === 9
+                                        ? authentek
+                                        : project.image
                             }
                             alt={`${project.title} image`}
                             width={640}
@@ -253,6 +312,27 @@ export default function ProjectsSection() {
                           ))}
                         </div>
                       </motion.div>
+                      {project.subsidiaryProjects && (
+                        <div className="mb-6">
+                          <h3 className="text-sm font-medium text-gray-900 mb-3">Subsidiary Projects:</h3>
+                          <div className="space-y-2">
+                            {project.subsidiaryProjects.map((sub, idx) => (
+                              <div key={idx} className="text-sm">
+                                <span className="font-medium">{sub.name}: </span>
+                                <a
+                                  href={sub.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-blue-600 hover:underline"
+                                >
+                                  View Project →
+                                </a>
+                                <p className="text-xs text-gray-500">{sub.description}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                       <div className="flex gap-4">
                         <Link
                           href={project.demoLink}
@@ -262,7 +342,9 @@ export default function ProjectsSection() {
                         >
                           {project.demoLink?.includes("apps.apple.com")
                             ? "View on App Store"
-                            : "View Demo"}
+                            : project.demoLink.includes("canonizer.com")
+                              ? "View Project"
+                              : "View Demo"}
                         </Link>
 
                         {project.githubLink ? (

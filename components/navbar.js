@@ -15,9 +15,8 @@ const Tab = ({ href, label, selected, setSelected }) => {
           x: { duration: 0.3 },
         }}
         onClick={() => setSelected(href)}
-        className={`relative rounded-md px-2 py-1 text-sm  transition-colors ${
-          selected ? "text-white" : "text-gray-500"
-        }`}
+        className={`relative rounded-md px-2 py-1 text-sm  transition-colors ${selected ? "text-white" : "text-gray-500"
+          }`}
       >
         <span className="relative z-10">{label}</span>
         {selected && (
@@ -40,7 +39,7 @@ export default function Navbar() {
     { href: "/", label: "About" },
     { href: "/projects", label: "Projects" },
     { href: "/uses", label: "Uses" },
-    { href: "/newsletter", label: "Newsletter" },
+    // { href: "/newsletter", label: "Newsletter" },
     // { href: "/contact", label: "Contact" },
   ];
 

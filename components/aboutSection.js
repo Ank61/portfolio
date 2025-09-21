@@ -111,12 +111,12 @@ export default function AboutSection() {
           </li>
         </ol>
       </div>
-      <div class="mt-16">
-        <h1 class="font-medium text-gray-900 mb-4 text-lg">Skills</h1>
-        <div class="space-y-6">
+      <div className="mt-16">
+        <h1 className="font-medium text-gray-900 mb-4 text-lg">Skills</h1>
+        <div className="space-y-6">
           <div>
-            <h2 class="text-sm font-medium text-gray-700 mb-3">Frontend</h2>
-            <div class="flex flex-wrap gap-2">
+            <h2 className="text-sm font-medium text-gray-700 mb-3">Frontend</h2>
+            <div className="flex flex-wrap gap-2">
               {[
                 "JavaScript (ES6+)",
                 "TypeScript",
@@ -132,7 +132,7 @@ export default function AboutSection() {
               ].map((skill) => (
                 <span
                   key={skill}
-                  class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full cursor-pointer hover:text-black transition-colors"
+                  className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full cursor-pointer hover:text-black transition-colors"
                 >
                   {skill}
                 </span>
@@ -141,8 +141,8 @@ export default function AboutSection() {
           </div>
 
           <div>
-            <h2 class="text-sm font-medium text-gray-700 mb-3">Backend</h2>
-            <div class="flex flex-wrap gap-2">
+            <h2 className="text-sm font-medium text-gray-700 mb-3">Backend</h2>
+            <div className="flex flex-wrap gap-2">
               {[
                 "Node.js",
                 "Express.js",
@@ -158,7 +158,7 @@ export default function AboutSection() {
               ].map((skill) => (
                 <span
                   key={skill}
-                  class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full cursor-pointer hover:text-black transition-colors"
+                  className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full cursor-pointer hover:text-black transition-colors"
                 >
                   {skill}
                 </span>
@@ -167,10 +167,10 @@ export default function AboutSection() {
           </div>
 
           <div>
-            <h2 class="text-sm font-medium text-gray-700 mb-3">
+            <h2 className="text-sm font-medium text-gray-700 mb-3">
               DevOps & Database
             </h2>
-            <div class="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2">
               {[
                 "Docker",
                 "Azure CI/CD",
@@ -181,7 +181,7 @@ export default function AboutSection() {
               ].map((skill) => (
                 <span
                   key={skill}
-                  class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full cursor-pointer hover:text-black transition-colors"
+                  className="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full cursor-pointer hover:text-black transition-colors"
                 >
                   {skill}
                 </span>

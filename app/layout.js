@@ -3,6 +3,13 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#ffffff',
+};
+
 export const metadata = {
   title: "Ankit Chohan | Senior Software Engineer | Full-Stack Developer",
   description: "Senior Software Engineer specializing in React.js, Next.js, and Node.js. Building scalable web applications with modern JavaScript technologies.",
@@ -63,14 +70,7 @@ export const metadata = {
     shortcut: '/favicon-16x16.png',
     apple: '/apple-touch-icon.png',
   },
-  manifest: '/site.webmanifest',
-  themeColor: '#ffffff',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-    themeColor: '#ffffff',
-  },
+  manifest: '/site.webmanifest'
 };
 
 export default function RootLayout({ children }) {
