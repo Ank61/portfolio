@@ -29,6 +29,28 @@ export default function ProjectsSection() {
 
   const projects = [
     {
+      id: 7,
+      title: "Canonizer",
+      description:
+        "A web application for collaborative knowledge management and consensus building. Worked extensively on the frontend using React.js to create an intuitive user interface for managing and visualizing complex topic hierarchies.",
+      technologies: ["React.js", "Redux", "Material-UI", "D3.js", "REST APIs"],
+      demoLink: "https://canonizer.com/",
+      githubLink: null,
+      image: "canonizer",
+    },
+    {
+      id: 6,
+      title: "Partyra",
+      description:
+        "AI-powered event and social discovery app with video-first previews, social integrations, tickets and live stories. Worked on backend APIs and integrations.",
+      technologies: ["Node.js", "NestJS", "MongoDB", "Stripe", "Firebase"],
+      demoLink: "https://apps.apple.com/in/app/partyra/id1626994483",
+      playStoreLink:
+        "https://play.google.com/store/apps/details?id=com.partyra.android",
+      githubLink: null,
+      image: "partya",
+    },
+    {
       id: 9,
       title: "Authentek",
       description:
@@ -62,18 +84,8 @@ export default function ProjectsSection() {
       image: "mavrick",
     },
     {
-      id: 7,
-      title: "Canonizer",
-      description:
-        "A web application for collaborative knowledge management and consensus building. Worked extensively on the frontend using React.js to create an intuitive user interface for managing and visualizing complex topic hierarchies.",
-      technologies: ["React.js", "Redux", "Material-UI", "D3.js", "REST APIs"],
-      demoLink: "https://canonizer.com/",
-      githubLink: null,
-      image: "canonizer",
-    },
-    {
       id: 5,
-      title: "Phoneado",
+      title: "P Phones",
       description:
         "Backup communication app offering calls, messages, video chat, and 'Find My Phone' so you can connect from any device when your main phone is unavailable. Contributed on backend services.",
       technologies: ["Node.js", "Express", "PostgreSQL", "Redis", "AWS"],
@@ -83,33 +95,21 @@ export default function ProjectsSection() {
       githubLink: null,
       image: "phoneado",
     },
-    {
-      id: 6,
-      title: "Partyra",
-      description:
-        "AI-powered event and social discovery app with video-first previews, social integrations, tickets and live stories. Worked on backend APIs and integrations.",
-      technologies: ["Node.js", "NestJS", "MongoDB", "Stripe", "Firebase"],
-      demoLink: "https://apps.apple.com/in/app/partyra/id1626994483",
-      playStoreLink:
-        "https://play.google.com/store/apps/details?id=com.partyra.android",
-      githubLink: null,
-      image: "partya",
-    },
-    {
-      id: 1,
-      title: "Real-Time Chat Application",
-      description:
-        "A modern chat application with real-time messaging, media sharing, and AI-powered features. Built with Next.js, Socket.io, and MongoDB.",
-      technologies: [
-        "Next.js",
-        "Socket.io",
-        "MongoDB",
-        "Tailwind CSS",
-        "OpenAI API",
-      ],
-      demoLink: "https://chat-demo.com",
-      githubLink: "https://github.com/username/chat-app",
-    },
+    // {
+    //   id: 1,
+    //   title: "Real-Time Chat Application",
+    //   description:
+    //     "A modern chat application with real-time messaging, media sharing, and AI-powered features. Built with Next.js, Socket.io, and MongoDB.",
+    //   technologies: [
+    //     "Next.js",
+    //     "Socket.io",
+    //     "MongoDB",
+    //     "Tailwind CSS",
+    //     "OpenAI API",
+    //   ],
+    //   demoLink: "https://chat-demo.com",
+    //   githubLink: "https://github.com/username/chat-app",
+    // },
   ];
 
   const getImageComponent = (imageName) => {
@@ -151,7 +151,7 @@ export default function ProjectsSection() {
               key={project.id}
               layoutId={project.id}
               onClick={() => setSelectedId(project.id)}
-              className="mt-3 cursor-pointer p-6 rounded-lg bg-white border border-gray-100"
+              className="mt-3 cursor-pointer p-3 rounded-lg bg-white border border-gray-100"
             >
               {project.image ? (
                 <div className="mb-3 h-28 md:h-32 flex items-center justify-center">
@@ -180,27 +180,6 @@ export default function ProjectsSection() {
                   </span>
                 ))}
               </div>
-              {/* {project.subsidiaryProjects && (
-                <div className="mt-3">
-                  <div className="text-xs font-medium text-gray-500 mb-2">Subsidiary Projects:</div>
-                  <div className="space-y-2">
-                    {project.subsidiaryProjects.map((sub, idx) => (
-                      <div key={idx} className="text-sm">
-                        <span className="font-medium">{sub.name}: </span>
-                        <a
-                          href={sub.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-blue-600 hover:underline"
-                        >
-                          View Project →
-                        </a>
-                        <p className="text-xs text-gray-500">{sub.description}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )} */}
               <div className="flex gap-3">
                 {project.demoLink && (
                   <Link

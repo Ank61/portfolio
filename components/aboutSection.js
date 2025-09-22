@@ -111,7 +111,7 @@ export default function AboutSection() {
           </li>
         </ol>
       </div>
-      <div className="mt-16">
+      {/* <div className="mt-16">
         <h1 className="font-medium text-gray-900 mb-4 text-lg">Skills</h1>
         <div className="space-y-6">
           <div>
@@ -189,7 +189,7 @@ export default function AboutSection() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </motion.div>
   );
 }
