@@ -16,7 +16,7 @@ export default function Social() {
             decoding="async"
             data-nimg="1"
             src={XLogo}
-            style={{color: "transparent"}}
+            style={{ color: "transparent" }}
             className="mt-1 "
           />
         </a>
@@ -29,11 +29,15 @@ export default function Social() {
             decoding="async"
             data-nimg="1"
             src={githubLogo}
-            style={{color: "transparent"}}
+            style={{ color: "transparent" }}
             className="ml-1"
           />
         </a>
-        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ankitchohan61/">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.linkedin.com/in/ankitchohan61/"
+        >
           <Image
             alt="Linkedin"
             loading="lazy"
@@ -42,7 +46,7 @@ export default function Social() {
             decoding="async"
             data-nimg="1"
             src={linkedLogo}
-            style={{color: "transparent"}}
+            style={{ color: "transparent" }}
             className="mt-0.5 ml-1"
           />
         </a>
