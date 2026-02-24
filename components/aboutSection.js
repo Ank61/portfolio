@@ -71,7 +71,7 @@ export default function AboutSection() {
                 Software Engineer L1
               </div>
               <div className="inline-block ml-2 text-xs rounded-full px-2 py-1 bg-green-100 text-green-700">
-                2025 - Pres
+                2025 - Present
               </div>
             </div>
             <div className="mb-3 text-sm font-medium text-gray-600">

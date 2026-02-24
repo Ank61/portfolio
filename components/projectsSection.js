@@ -9,6 +9,8 @@ import partyra from "../images/partya.png";
 import canonizer from "../images/canonizer.png";
 import mavrick from "../images/mavrick.png";
 import authentek from "../images/authentek.png";
+import { ExternalLink, Github, Smartphone } from 'lucide-react';
+
 
 export default function ProjectsSection() {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -78,8 +80,8 @@ export default function ProjectsSection() {
       description:
         "A mobile application for the Mavrick Club community. Solely handled the entire backend development, including API design, database architecture, and server infrastructure to ensure seamless user experience and robust performance.",
       technologies: ["Node.js", "Express", "MongoDB", "AWS", "RESTful APIs", "WebSockets"],
-      demoLink: null,
-      playStoreLink: null,
+      demoLink: "https://apps.apple.com/us/app/the-maverick-club/id6755190478",
+      playStoreLink: "https://play.google.com/store/apps/details?id=com.maverick.user.mobile",
       githubLink: null,
       image: "mavrick",
     },
@@ -139,7 +141,13 @@ export default function ProjectsSection() {
     >
       <div>
         <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-full gap-x-3 gap-y-2">
-          {projects.map((project) => (
+          {projects.map((project) => {
+                          const getDemoLabel = (url) => {
+  if (url.includes("apps.apple.com")) return "App Store";
+  if (url.includes("canonizer.com")) return "View Project";
+  return "Live Demo";
+};
+            return (
             <motion.div
               id="project"
               whileHover={{
@@ -180,7 +188,7 @@ export default function ProjectsSection() {
                   </span>
                 ))}
               </div>
-              <div className="flex gap-3">
+              {/* <div className="flex gap-3">
                 {project.demoLink && (
                   <Link
                     href={project.demoLink}
@@ -215,9 +223,81 @@ export default function ProjectsSection() {
                     GitHub →
                   </Link>
                 )}
+              </div> */}
+              {/* <div className="flex flex-wrap gap-2 mt-3">
+                {project.demoLink && (
+                  <Link
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-4 py-1.5 text-sm font-medium rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400 transition-colors"
+                  >
+                    {getDemoLabel(project.demoLink)}
+                  </Link>
+                )}
+
+                {project.playStoreLink && (
+                  <Link
+                    href={project.playStoreLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-4 py-1.5 text-sm font-medium rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400 transition-colors"
+                  >
+                    Play Store
+                  </Link>
+                )}
+
+                {project.githubLink && (
+                  <Link
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-4 py-1.5 text-sm font-medium rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400 transition-colors"
+                  >
+                    GitHub
+                  </Link>
+                )}
+              </div> */}
+              <div className="flex flex-wrap gap-2 mt-4">
+                {project.demoLink && (
+                  <Link
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-lg text-sm  border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+                  >
+                    <ExternalLink className="w-3 h-3 group-hover:rotate-12 transition-transform duration-200" />
+                    {getDemoLabel(project.demoLink)}
+                  </Link>
+                )}
+
+                {project.playStoreLink && (
+                  <Link
+                    href={project.playStoreLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-lg text-sm  border border-gray-200 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+                  >
+                    <Smartphone className="w-3 h-3 group-hover:scale-110 transition-transform duration-200" />
+                    Play Store
+                  </Link>
+                )}
+
+                {project.githubLink && (
+                  <Link
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold rounded-lg text-sm bg border border-gray-200 shadow-gray-300 hover:shadow-md hover:shadow-gray-400 hover:-translate-y-0.5 transition-all duration-200"
+                  >
+                    <Github className="w-3 h-3 group-hover:rotate-12 transition-transform duration-200" />
+                    GitHub
+                  </Link>
+                )}
               </div>
             </motion.div>
-          ))}
+          )}
+          )}
           {isLargeScreen ? (
             <AnimatePresence>
               {selectedId &&
